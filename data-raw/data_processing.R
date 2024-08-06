@@ -77,11 +77,12 @@ replace_all_character_labels <- function(data, dict) {
   return(data)
 }
 
-clean_data <- replace_all_character_labels(raw_data_raw_labels, label_dict)
+mwfertiliserpilot <- replace_all_character_labels(raw_data_raw_labels, label_dict)
 
 # Export Data ------------------------------------------------------------------
+usethis::use_data(mwfertiliserpilot, overwrite = TRUE)
 fs::dir_create(here::here("inst", "extdata"))
-readr::write_csv(clean_data,
-                 here::here("inst", "extdata", paste0("clean_data", ".csv")))
-openxlsx::write.xlsx(clean_data,
-                     here::here("inst", "extdata", paste0("clean_data", ".xlsx")))
+readr::write_csv(mwfertiliserpilot,
+                 here::here("inst", "extdata", paste0("mwfertiliserpilot", ".csv")))
+openxlsx::write.xlsx(mwfertiliserpilot,
+                     here::here("inst", "extdata", paste0("mwfertiliserpilot", ".xlsx")))
