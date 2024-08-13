@@ -1,10 +1,10 @@
 Package: mwfertiliserpilot
-Title: What the Package Does (One Line, Title Case)
+Title: Maize fertilizer management survey pilot data, July 2024
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Colin", "Walder", , "cwalder@ethz.ch", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0006-0969-1954"))
+Description: In July 2024, 129 farmers were surveyed on fertilizer management for maize cultivation in the Ntonda Extension Planning Area (EPA) of Blantyre District, Southern Region of Malawi.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8

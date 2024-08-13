@@ -13,12 +13,12 @@ data,mwfertiliserpilot.rda,hoh_education,character,What is your highest level of
 data,mwfertiliserpilot.rda,n_years_farming,character,How many years have you been farming?
 data,mwfertiliserpilot.rda,own_livestock,character,"Do you own any livestock (cows, chickens, pigs, etc.)?"
 data,mwfertiliserpilot.rda,own_livestock_animals,character,Do you own...?
-data,mwfertiliserpilot.rda,own_livestock_animals.cows,integer,Cows
-data,mwfertiliserpilot.rda,own_livestock_animals.chickens,integer,Chickens
-data,mwfertiliserpilot.rda,own_livestock_animals.pigs,integer,Pigs
-data,mwfertiliserpilot.rda,own_livestock_animals.goats,integer,Goats
-data,mwfertiliserpilot.rda,own_livestock_animals.sheep,integer,Sheep
-data,mwfertiliserpilot.rda,own_livestock_animals.other,integer,Other livestock
+data,mwfertiliserpilot.rda,own_livestock_animals.cows,integer,NA
+data,mwfertiliserpilot.rda,own_livestock_animals.chickens,integer,NA
+data,mwfertiliserpilot.rda,own_livestock_animals.pigs,integer,NA
+data,mwfertiliserpilot.rda,own_livestock_animals.goats,integer,NA
+data,mwfertiliserpilot.rda,own_livestock_animals.sheep,integer,NA
+data,mwfertiliserpilot.rda,own_livestock_animals.other,integer,NA
 data,mwfertiliserpilot.rda,farming_main_income,character,Is farming your household's main source of income?
 data,mwfertiliserpilot.rda,household_main_income,character,What is your household's main source of income?
 data,mwfertiliserpilot.rda,n_acres_farm,double,How large is your farm (in acres)?
@@ -80,8 +80,8 @@ data,mwfertiliserpilot.rda,timing_topdressing,character,When do you apply urea (
 data,mwfertiliserpilot.rda,timing_topdressing_other,character,Please specify.
 data,mwfertiliserpilot.rda,place_topdressing,character,Where do you apply urea (topdressing fertilizers)?
 data,mwfertiliserpilot.rda,place_topdressing_other,logical,Please specify.
-data,mwfertiliserpilot.rda,basal_fertilizer_grams,double,Grams of basal fertilizer applied
-data,mwfertiliserpilot.rda,topdressing_fertilizer_grams,double,Grams of topdressing fertilizer applied
+data,mwfertiliserpilot.rda,basal_fertilizer_grams,double,NA
+data,mwfertiliserpilot.rda,topdressing_fertilizer_grams,double,NA
 data,mwfertiliserpilot.rda,know_recommended_tools,character,Do you know the recommended cups (cups #5 or #8) for maize?
 data,mwfertiliserpilot.rda,reason_no_use_scoop,character,Why are you not using them?
 data,mwfertiliserpilot.rda,reason_no_use_scoop_other,character,Please elaborate.
@@ -121,4 +121,4 @@ data,mwfertiliserpilot.rda,reasons_changes,character,Why do you think so?
 data,mwfertiliserpilot.rda,suggestions_soil_improvement,character,What do you think should be done to restore/maintain/improve the soil health in your field?
 data,mwfertiliserpilot.rda,final_comments,character,Do you have anything else you would like to tell us?
 data,mwfertiliserpilot.rda,end_message,character,"Thank you for your time. The survey is now finished. Thank the person for their availability, time and answers. Ask if they have any further questions. This space allows you to report anything that may have been unusual during the survey."
-data,mwfertiliserpilot.rda,uuid,character,Unique identifier
+data,mwfertiliserpilot.rda,uuid,character,NA
