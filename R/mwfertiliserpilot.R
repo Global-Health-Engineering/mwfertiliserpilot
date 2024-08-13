@@ -1,6 +1,6 @@
 #' mwfertiliserpilot: Fertilizer management pilot survey for maize cultivation in Ntonda EPA, Malawi
 #'
-#' In July 2024, 129 farmers were surveyed on fertilizer management for maize cultivation in the Ntonda Extension Planning Area (EPA) of Blantyre District, Southern Region of Malawi.
+#' Data from 129 farmers in the Ntonda Extension Planning Area (EPA) of Blantyre District, Malawi, regarding their maize cultivation practices.
 #'
 #' @format A tibble with 129 rows and 123 variables
 #' \describe{

@@ -7,8 +7,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -31,7 +29,9 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-The goal of mwfertiliserpilot is to ...
+Maize plays a central role in Malawi, yet best practices regarding its cultivation are rarely followed. Too much fertilizer (if available) is used per planting station, spacing between and across planting stations varies widely and the appropriate seeds are rarely used. 
+
+This dataset contains fertilizer management data from 129 farmers in the Ntonda Extension Planning Area (EPA) in Blantyre District in southern Malawi. Over a period of one week, farmers in different sections of the EPA were interviewed about their practices regarding maize cultivation. In addition, samples of both basal (NPK) and topdressing (urea) fertilizer were taken (`basal_fertilizer_grams` and `topdressing_fertilizer_grams`) to better understand how much fertilizer is used per planting station. 
 
 ## Installation
 
@@ -43,7 +43,7 @@ You can install the development version of mwfertiliserpilot from
 devtools::install_github("openwashdata/mwfertiliserpilot")
 ```
 
-```{r}
+```{r, include=FALSE}
 ## Run the following code in console if you don't have the packages
 ## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
 library(dplyr)
@@ -75,23 +75,13 @@ read_csv("data-raw/dictionary.csv") |>
 
 ## Data
 
-The package provides access to ...
-
 ```{r}
 library(mwfertiliserpilot)
 ```
 
 ### mwfertiliserpilot
 
-The dataset `mwfertiliserpilot` contains data about ...
-It has `r nrow(mwfertiliserpilot)` observations and `r ncol(mwfertiliserpilot)` variables
-
-```{r}
-mwfertiliserpilot |> 
-  head(3) |> 
-  gt::gt() |>
-  gt::as_raw_html()
-```
+The dataset `mwfertiliserpilot` contains data from 129 farmers regarding their maize fertilizer management in Ntonda EPA, Blantyre District, Malawi.
 
 For an overview of the variable names, see the following table.
 
@@ -105,12 +95,44 @@ readr::read_csv("data-raw/dictionary.csv") |>
 ```
 
 
+
 ## Example
 
 ```{r}
 library(mwfertiliserpilot)
+library(tidyverse)
 
-# Provide some example code here
+hist(mwfertiliserpilot$n_acres_maize,
+     main = "Acres dedicated to maize farming",
+     xlab = "Acres")
+
+mwfertiliserpilot |> 
+  ggplot(aes(x = n_acres_maize, y = n_bags_npk)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Relationship between maize cultivation area and basal fertilizer used",
+       x = "\nAcres",
+       y = "Bags of NPK\n") +
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank())
+
+mwfertiliserpilot |> 
+  group_by(chem_fertilizer) |> 
+  count() |> 
+  ungroup() |> 
+  mutate(rel_freq = n/sum(n)) |> 
+  ggplot(aes(x = chem_fertilizer, y = rel_freq)) +
+  geom_col() +
+  scale_y_continuous(labels = scales::label_percent()) +
+  labs(title = "Do you use chemical fertilizer?",
+       x = "",
+       y = "") +
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank())
+
+boxplot(mwfertiliserpilot$topdressing_fertilizer_grams,
+        ylab = "Grams",
+        main = "Distribution of topdressing (urea) fertilizer applied per planting station")
 ```
 
 
