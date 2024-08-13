@@ -39,15 +39,28 @@ raw_data_measurements_added <- raw_data |>
   left_join(npk_measurements) |>
   left_join(urea_measurements)
 
+# replace the last "_" with an "." in all variables starting with "own_livestock_animals_"
+
+cols_of_interest <- grep("own_livestock_animals_", colnames(raw_data_measurements_added), value = TRUE)
+
+new_colnames <- sub("_(?!.*_)", ".", cols_of_interest, perl = TRUE)
+
+colnames(raw_data_measurements_added)[colnames(raw_data_measurements_added) %in% cols_of_interest] <- new_colnames
+
 # combine the data and turn alls 99s into NAs as the were placeholders for NA in the survey
 raw_data_raw_labels <- raw_data_measurements_added |>
-  select(all_of(questions), tag_basal_fertilizer_grams, tag_topdressing_fertilizer_grams) |>
-  relocate(tag_basal_fertilizer_grams, .after = tag_basal_fertilizer) |>
-  relocate(tag_topdressing_fertilizer_grams, .after = tag_topdressing_fertilizer) |>
+  select(all_of(questions),
+         contains("."),
+         basal_fertilizer_grams = tag_basal_fertilizer_grams,
+         topdressing_fertilizer_grams = tag_topdressing_fertilizer_grams,
+         uuid = `_uuid`) |>
+  relocate(basal_fertilizer_grams, .after = tag_basal_fertilizer) |>
+  relocate(topdressing_fertilizer_grams, .after = tag_topdressing_fertilizer) |>
+  select(-c(tag_basal_fertilizer, tag_topdressing_fertilizer)) |>
+  relocate(contains("own_livestock_animals."), .after = "own_livestock_animals") |>
   mutate(across(where(is.numeric), ~na_if(., 99))) |>
   mutate(across(where(is.numeric), ~na_if(., -99))) |>
-  mutate(across(where(is.numeric), ~na_if(., 0.99)))
-
+  mutate(across(where(is.double) & -any_of(c("start", "end", "today")), ~na_if(., 0.99)))
 
 # Replace XML codes with labels -------------------------------------------
 
@@ -77,7 +90,27 @@ replace_all_character_labels <- function(data, dict) {
   return(data)
 }
 
-mwfertiliserpilot <- replace_all_character_labels(raw_data_raw_labels, label_dict)
+replace_all_character_labels_ext <- function(data, dict, exceptions) {
+
+  names_vec <- names(data)
+
+  names_vec_updated <- names_vec[! names_vec %in% exceptions]
+
+  for (col in names_vec_updated) {
+
+    if (is.character(data[[col]])) {
+
+      matched_indices <- match(data[[col]], dict$identifier)
+
+      new_values <- dict$label[matched_indices]
+
+      data[[col]] <- ifelse(is.na(new_values), data[[col]], new_values)
+    }
+  }
+  return(data)
+}
+
+mwfertiliserpilot <- replace_all_character_labels_ext(raw_data_raw_labels, label_dict, exceptions = c("own_livestock_animals"))
 
 # Export Data ------------------------------------------------------------------
 usethis::use_data(mwfertiliserpilot, overwrite = TRUE)
