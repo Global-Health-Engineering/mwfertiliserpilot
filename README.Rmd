@@ -83,7 +83,7 @@ library(mwfertiliserpilot)
 
 The dataset `mwfertiliserpilot` contains data from 129 farmers regarding their maize fertilizer management in Ntonda EPA, Blantyre District, Malawi.
 
-For an overview of the variable names, see the following table.
+For an overview of the variable names, see the following table:
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |>

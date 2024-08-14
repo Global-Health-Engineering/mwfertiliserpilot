@@ -1,15 +1,28 @@
 library(tidyverse)
 library(readxl)
 
+dictionary <- read_csv("data-raw/dictionary.csv")
+
 # import question labels from XLS form
-question_labels <- read_xlsx("documents/fertilizer-management-pilot.xlsx") |>
+question_labels <- read_xlsx("inst/extdata/fertilizer-management-pilot.xlsx") |>
   select(variable_name = name, label = `label::English (en)`)
 
 # add to dictionary
 join_dictionary <- dictionary |>
   left_join(question_labels) |>
   mutate(description = label) |>
-  select(-label)
+  select(-label) |>
+  mutate(description = case_when(variable_name == "own_livestock_animals.cows" ~ "Cows",
+                                 variable_name == "own_livestock_animals.chickens" ~ "Chickens",
+                                 variable_name == "own_livestock_animals.pigs" ~ "Pigs",
+                                 variable_name == "own_livestock_animals.goats" ~ "Goats",
+                                 variable_name == "own_livestock_animals.sheep" ~ "Sheep",
+                                 variable_name == "own_livestock_animals.other" ~ "Other livestock",
+                                 variable_name == "basal_fertilizer_grams" ~ "Grams basal fertilizer (NPK)",
+                                 variable_name == "topdressing_fertilizer_grams" ~ "Grams topdressing fertilizer (urea)",
+                                 variable_name == "uuid" ~ "Unique identifier",
+                                 TRUE ~ description
+                                 ))
 
 write_csv(join_dictionary, file = "data-raw/dictionary.csv")
 

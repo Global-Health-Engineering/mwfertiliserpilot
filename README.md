@@ -232,7 +232,7 @@ own_livestock_animals.cows
 integer
 </td>
 <td style="text-align:left;">
-NA
+Cows
 </td>
 </tr>
 <tr>
@@ -243,7 +243,7 @@ own_livestock_animals.chickens
 integer
 </td>
 <td style="text-align:left;">
-NA
+Chickens
 </td>
 </tr>
 <tr>
@@ -254,7 +254,7 @@ own_livestock_animals.pigs
 integer
 </td>
 <td style="text-align:left;">
-NA
+Pigs
 </td>
 </tr>
 <tr>
@@ -265,7 +265,7 @@ own_livestock_animals.goats
 integer
 </td>
 <td style="text-align:left;">
-NA
+Goats
 </td>
 </tr>
 <tr>
@@ -276,7 +276,7 @@ own_livestock_animals.sheep
 integer
 </td>
 <td style="text-align:left;">
-NA
+Sheep
 </td>
 </tr>
 <tr>
@@ -287,7 +287,7 @@ own_livestock_animals.other
 integer
 </td>
 <td style="text-align:left;">
-NA
+Other livestock
 </td>
 </tr>
 <tr>
@@ -715,7 +715,7 @@ Where do you apply them?
 place_fertilizer_mix_other
 </td>
 <td style="text-align:left;">
-logical
+character
 </td>
 <td style="text-align:left;">
 Please specify.
@@ -759,7 +759,7 @@ When do you apply them for the first application?
 timing_fertilizer_mix_t1_other
 </td>
 <td style="text-align:left;">
-logical
+character
 </td>
 <td style="text-align:left;">
 Please specify.
@@ -781,7 +781,7 @@ Where do you apply them for the first application?
 place_fertilizer_mix_t1_other
 </td>
 <td style="text-align:left;">
-logical
+character
 </td>
 <td style="text-align:left;">
 Please specify.
@@ -849,7 +849,7 @@ Where do you apply them for the second application?
 place_fertilizer_mix_t2_other
 </td>
 <td style="text-align:left;">
-logical
+character
 </td>
 <td style="text-align:left;">
 Please specify.
@@ -895,7 +895,7 @@ When do you apply NPK (basal fertilizer)?
 timing_basal_fertilizer_other
 </td>
 <td style="text-align:left;">
-logical
+character
 </td>
 <td style="text-align:left;">
 Please specify.
@@ -917,7 +917,7 @@ Where do you apply NPK (basal fertilizer)?
 place_basal_fertilizer_other
 </td>
 <td style="text-align:left;">
-logical
+character
 </td>
 <td style="text-align:left;">
 Please specify.
@@ -961,7 +961,7 @@ Where do you apply urea (topdressing fertilizers)?
 place_topdressing_other
 </td>
 <td style="text-align:left;">
-logical
+character
 </td>
 <td style="text-align:left;">
 Please specify.
@@ -975,7 +975,7 @@ basal_fertilizer_grams
 double
 </td>
 <td style="text-align:left;">
-NA
+Grams basal fertilizer (NPK)
 </td>
 </tr>
 <tr>
@@ -986,7 +986,7 @@ topdressing_fertilizer_grams
 double
 </td>
 <td style="text-align:left;">
-NA
+Grams topdressing fertilizer (urea)
 </td>
 </tr>
 <tr>
@@ -1093,7 +1093,7 @@ Do you know how much it costs in the shop?
 price_scoop
 </td>
 <td style="text-align:left;">
-logical
+double
 </td>
 <td style="text-align:left;">
 How much?
@@ -1432,7 +1432,7 @@ uuid
 character
 </td>
 <td style="text-align:left;">
-NA
+Unique identifier
 </td>
 </tr>
 </tbody>

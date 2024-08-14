@@ -11,7 +11,7 @@ raw_data <- kobo_data(x = "aWtRoDGQCbMFZ9nzQ5BFw7",
   filter(today >= "2024-07-29")
 
 # read in questionnaire from Kobo XLS form
-questionnaire <- read_xlsx("documents/fertilizer-management-pilot.xlsx")
+questionnaire <- read_xlsx("inst/extdata/fertilizer-management-pilot.xlsx")
 
 # only keep main variable types and don't include variables with PII (personally identifiable information)
 questions <- questionnaire |>
@@ -60,11 +60,13 @@ raw_data_raw_labels <- raw_data_measurements_added |>
   relocate(contains("own_livestock_animals."), .after = "own_livestock_animals") |>
   mutate(across(where(is.numeric), ~na_if(., 99))) |>
   mutate(across(where(is.numeric), ~na_if(., -99))) |>
-  mutate(across(where(is.double) & -any_of(c("start", "end", "today")), ~na_if(., 0.99)))
+  mutate(across(where(is.double) & -any_of(c("start", "end", "today")), ~na_if(., 0.99))) |>
+  mutate(across(where(is.logical), as.character)) |>
+  mutate(price_scoop = as.numeric(price_scoop))
 
 # Replace XML codes with labels -------------------------------------------
 
-label_dict <- read_xlsx("documents/fertilizer-management-pilot.xlsx",
+label_dict <- read_xlsx("inst/extdata/fertilizer-management-pilot.xlsx",
                         sheet = "choices") |>
   filter(list_name != "enumerator") |>
   select(identifier = name,
@@ -74,23 +76,7 @@ label_dict <- read_xlsx("documents/fertilizer-management-pilot.xlsx",
   distinct(label, .keep_all = TRUE)
 
 # Helper function to replace XML codes for all character columns with its labels, keeping unmatched values
-replace_all_character_labels <- function(data, dict) {
-
-  for (col in seq_along(data)) {
-
-    if (is.character(data[[col]])) {
-
-      matched_indices <- match(data[[col]], dict$identifier)
-
-      new_values <- dict$label[matched_indices]
-
-      data[[col]] <- ifelse(is.na(new_values), data[[col]], new_values)
-    }
-  }
-  return(data)
-}
-
-replace_all_character_labels_ext <- function(data, dict, exceptions) {
+replace_xml_with_labels <- function(data, dict, exceptions) {
 
   names_vec <- names(data)
 
@@ -110,7 +96,7 @@ replace_all_character_labels_ext <- function(data, dict, exceptions) {
   return(data)
 }
 
-mwfertiliserpilot <- replace_all_character_labels_ext(raw_data_raw_labels, label_dict, exceptions = c("own_livestock_animals"))
+mwfertiliserpilot <- replace_xml_with_labels(raw_data_raw_labels, label_dict, exceptions = c("own_livestock_animals"))
 
 # Export Data ------------------------------------------------------------------
 usethis::use_data(mwfertiliserpilot, overwrite = TRUE)
