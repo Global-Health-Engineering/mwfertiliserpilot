@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# mwfertiliserpilot
+# mwfertiliserpilot: Data from maize fertiliser survey in Ntonda EPA, Southern Malawi 
 
 <!-- badges: start -->
 
@@ -29,9 +29,24 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-## Contributors
+## People involved
 
-- Colin Walder ([0009-0006-0969-1954](0009-0006-0969-1954)
+- Colin Walder <a href="https://orcid.org/0009-0006-0969-1954">
+<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /> 0009-0006-0969-1954
+</a> *author, creator*
+- Cyrus Llyod *contributor*
+- Davis Banda *contributor*
+- Hildah Bonongwe *contributor*
+- Kondwani Nantchito <a href="https://orcid.org/0009-0008-5773-129Х">
+<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /> 0009-0008-5773-129Х </a> *contributor*
+- Mayamiko Mbedza <a href="https://orcid.org/0009-0005-3787-7492">
+<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /> 0009-0005-3787-7492
+</a> *contributor*
+- Phalyce George *contributor*
+- Elizabeth Tilley <a href="https://orcid.org/0000-0002-2095-9724">
+<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /> 0000-0002-2095-9724
+</a> *contributor*
+
 
 Maize plays a central role in Malawi, yet best practices regarding its cultivation are rarely followed. Often, too much or too little fertilizer is used per planting station, spacing between and across planting stations varies widely and the appropriate seeds are rarely used. 
 
@@ -87,7 +102,7 @@ library(mwfertiliserpilot)
 
 The dataset `mwfertiliserpilot` contains data from 129 farmers regarding their maize fertilizer management in Ntonda EPA, Blantyre District, Malawi.
 
-For an overview of the variable names, see the following table:
+For an overview of the variable names, see the following table.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |>

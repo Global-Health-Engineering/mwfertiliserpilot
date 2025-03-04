@@ -1,0 +1,124 @@
+directory,file_name,variable_name,variable_type,description
+data,mwfertiliserpilot.rda,start,double,Survey start
+data,mwfertiliserpilot.rda,end,double,Survey end
+data,mwfertiliserpilot.rda,today,double,Survey date
+data,mwfertiliserpilot.rda,consent,character,Do you give consent to proceed with this survey?
+data,mwfertiliserpilot.rda,village_name,character,Please enter the name of the village.
+data,mwfertiliserpilot.rda,gvh_name,character,Please enter the name of the group village head (GVH).
+data,mwfertiliserpilot.rda,ta_name,character,Please enter the name of the traditional authority (TA).
+data,mwfertiliserpilot.rda,farmer_gender,character,Please enter the farmer's gender.
+data,mwfertiliserpilot.rda,farmer_age,double,Please enter the farmer's age.
+data,mwfertiliserpilot.rda,farmer_hoh,character,Are you the head of the household?
+data,mwfertiliserpilot.rda,hoh_education,character,What is your highest level of education?
+data,mwfertiliserpilot.rda,n_years_farming,character,How many years have you been farming?
+data,mwfertiliserpilot.rda,own_livestock,character,"Do you own any livestock (cows, chickens, pigs, etc.)?"
+data,mwfertiliserpilot.rda,own_livestock_animals,character,Do you own...?
+data,mwfertiliserpilot.rda,own_livestock_animals.cows,integer,NA
+data,mwfertiliserpilot.rda,own_livestock_animals.chickens,integer,NA
+data,mwfertiliserpilot.rda,own_livestock_animals.pigs,integer,NA
+data,mwfertiliserpilot.rda,own_livestock_animals.goats,integer,NA
+data,mwfertiliserpilot.rda,own_livestock_animals.sheep,integer,NA
+data,mwfertiliserpilot.rda,own_livestock_animals.other,integer,NA
+data,mwfertiliserpilot.rda,farming_main_income,character,Is farming your household's main source of income?
+data,mwfertiliserpilot.rda,household_main_income,character,What is your household's main source of income?
+data,mwfertiliserpilot.rda,n_acres_farm,double,How large is your farm (in acres)?
+data,mwfertiliserpilot.rda,n_acres_maize,double,How much area is dedicated to maize farming (in acres)?
+data,mwfertiliserpilot.rda,source_water_farm,character,Is this area rain-fed or part of an irrigation scheme?
+data,mwfertiliserpilot.rda,chem_fertilizer,character,Did you apply chemical fertilizer this year?
+data,mwfertiliserpilot.rda,chem_fertilizer_type,character,What chemical fertilizer do you use?
+data,mwfertiliserpilot.rda,n_bags_npk,double,How many bags of NPK did you apply THIS YEAR?
+data,mwfertiliserpilot.rda,n_bags_npk_subsidized,double,How many of those were subsidised?
+data,mwfertiliserpilot.rda,price_bags_npk_nonsubsidized,double,How much did you pay for a full-priced bag of NPK?
+data,mwfertiliserpilot.rda,price_bags_npk_subsidized,double,How much did you pay for a subsidised bag of NPK?
+data,mwfertiliserpilot.rda,enough_bags_npk,character,Was this enough NPK to meet your needs?
+data,mwfertiliserpilot.rda,n_bags_npk_desired,double,How many bags of NPK would you have liked?
+data,mwfertiliserpilot.rda,n_bags_npk_buying_next_year,double,How many bags of NPK will you try to buy for the coming year?
+data,mwfertiliserpilot.rda,n_bags_urea,double,How many bags of urea did you apply THIS YEAR?
+data,mwfertiliserpilot.rda,n_bags_urea_subsidized,double,How many of those were subsidised?
+data,mwfertiliserpilot.rda,price_bags_urea_nonsubsidized,double,How much did you pay for a full-priced bag of urea?
+data,mwfertiliserpilot.rda,price_bags_urea_subsidized,double,How much did you pay for a subsidised bag of urea?
+data,mwfertiliserpilot.rda,enough_bags_urea,character,Was this enough urea to meet your needs?
+data,mwfertiliserpilot.rda,n_bags_urea_desired,double,How many bags of urea would you have liked?
+data,mwfertiliserpilot.rda,n_bags_urea_buying_next_year,double,How many bags of urea will you try to buy for the coming year?
+data,mwfertiliserpilot.rda,able_buy_bags_past,character,Were you able to buy all the fertilizer you require 5 years ago?
+data,mwfertiliserpilot.rda,n_bags_maize_t1_season,double,How many bags of maize did you harvest in the last growing season?
+data,mwfertiliserpilot.rda,n_bags_maize_t2_season,double,How many bags of maize did you harvest two growing seasons ago?
+data,mwfertiliserpilot.rda,n_bags_maize_t3_season,double,How many bags of maize did you harvest three growing seasons ago?
+data,mwfertiliserpilot.rda,fertilizer_comparison_5years,character,"Do you need more, less or the same amount of chemical fertilizer to grow the same amount of maize now as you did 5 years ago?"
+data,mwfertiliserpilot.rda,same_tool_for_fertilizer,character,Do you use the same tool to apply NPK (basal) and urea (topdressing)?
+data,mwfertiliserpilot.rda,single_tool_fertilizer,character,What tool do you use to apply them?
+data,mwfertiliserpilot.rda,single_tool_fertilizer_other,character,Please specify.
+data,mwfertiliserpilot.rda,tool_basal_fertilizer,character,What tool do you use to apply NPK (basal fertilizer) in your field?
+data,mwfertiliserpilot.rda,tool_basal_fertilizer_other,character,Please specify.
+data,mwfertiliserpilot.rda,tool_topdressing_fertilizer,character,What tool do you use to apply urea (topdressing fertilizer) in your field?
+data,mwfertiliserpilot.rda,tool_topdressing_fertilizer_other,character,Please specify.
+data,mwfertiliserpilot.rda,timing_fertilizer,character,Do you apply NPK and urea at different times or the same time?
+data,mwfertiliserpilot.rda,timing_fertilizer_mix_ntimes,character,Do you apply the mix once or twice?
+data,mwfertiliserpilot.rda,timing_fertilizer_mix,character,When do you apply them?
+data,mwfertiliserpilot.rda,timing_fertilizer_mix_other,character,Please specify.
+data,mwfertiliserpilot.rda,place_fertilizer_mix,character,Where do you apply them?
+data,mwfertiliserpilot.rda,place_fertilizer_mix_other,logical,Please specify.
+data,mwfertiliserpilot.rda,ratio_fertilizer_mix_npk,double,What's the NPK to urea ratio? Enter the number for NPK:
+data,mwfertiliserpilot.rda,ratio_fertilizer_mix_urea,double,What's the NPK to urea ratio? Enter the number for urea:
+data,mwfertiliserpilot.rda,timing_fertilizer_mix_t1,character,When do you apply them for the first application?
+data,mwfertiliserpilot.rda,timing_fertilizer_mix_t1_other,logical,Please specify.
+data,mwfertiliserpilot.rda,place_fertilizer_mix_t1,character,Where do you apply them for the first application?
+data,mwfertiliserpilot.rda,place_fertilizer_mix_t1_other,logical,Please specify.
+data,mwfertiliserpilot.rda,ratio_fertilizer_mix_t1_npk,double,What's the NPK to urea ratio for the first application? Enter the number for NPK:
+data,mwfertiliserpilot.rda,ratio_fertilizer_mix_t1_urea,double,What's the NPK to urea ratio for the first application? Enter the number for urea:
+data,mwfertiliserpilot.rda,timing_fertilizer_mix_t2,character,When do you apply them for the second application?
+data,mwfertiliserpilot.rda,timing_fertilizer_mix_t2_other,character,Please specify.
+data,mwfertiliserpilot.rda,place_fertilizer_mix_t2,character,Where do you apply them for the second application?
+data,mwfertiliserpilot.rda,place_fertilizer_mix_t2_other,logical,Please specify.
+data,mwfertiliserpilot.rda,ratio_fertilizer_mix_t2_npk,double,What's the NPK to urea ratio for the second application? Enter the number for NPK:
+data,mwfertiliserpilot.rda,ratio_fertilizer_mix_t2_urea,double,What's the NPK to urea ratio for the second application? Enter the number for urea:
+data,mwfertiliserpilot.rda,timing_basal_fertilizer,character,When do you apply NPK (basal fertilizer)?
+data,mwfertiliserpilot.rda,timing_basal_fertilizer_other,logical,Please specify.
+data,mwfertiliserpilot.rda,place_basal_fertilizer,character,Where do you apply NPK (basal fertilizer)?
+data,mwfertiliserpilot.rda,place_basal_fertilizer_other,logical,Please specify.
+data,mwfertiliserpilot.rda,timing_topdressing,character,When do you apply urea (topdressing fertilizers)?
+data,mwfertiliserpilot.rda,timing_topdressing_other,character,Please specify.
+data,mwfertiliserpilot.rda,place_topdressing,character,Where do you apply urea (topdressing fertilizers)?
+data,mwfertiliserpilot.rda,place_topdressing_other,logical,Please specify.
+data,mwfertiliserpilot.rda,basal_fertilizer_grams,double,NA
+data,mwfertiliserpilot.rda,topdressing_fertilizer_grams,double,NA
+data,mwfertiliserpilot.rda,know_recommended_tools,character,Do you know the recommended cups (cups #5 or #8) for maize?
+data,mwfertiliserpilot.rda,reason_no_use_scoop,character,Why are you not using them?
+data,mwfertiliserpilot.rda,reason_no_use_scoop_other,character,Please elaborate.
+data,mwfertiliserpilot.rda,would_use_scoop_if_given,character,Would you use the fertilizer scoops if they were given to you?
+data,mwfertiliserpilot.rda,would_use_scoop_if_available,character,Would you buy the fertilizer scoops if available?
+data,mwfertiliserpilot.rda,wtp_scoop,double,How much would you be willing to pay for the fertilizer scoops?
+data,mwfertiliserpilot.rda,selling_points_scoop,character,Do you know where the scoops are sold?
+data,mwfertiliserpilot.rda,selling_points_scoop_location,character,Can you state where?
+data,mwfertiliserpilot.rda,know_price_scoop,character,Do you know how much it costs in the shop?
+data,mwfertiliserpilot.rda,price_scoop,logical,How much?
+data,mwfertiliserpilot.rda,type_seed,character,What type of seed do you use?
+data,mwfertiliserpilot.rda,n_seeds,character,How many seeds do you plant per planting station?
+data,mwfertiliserpilot.rda,planting_distance,double,Measure how far the planting stations are away from each other.
+data,mwfertiliserpilot.rda,ridges_distance,double,Measure how far the ridges are away from each other.
+data,mwfertiliserpilot.rda,several_plants_emerging,character,"If multiple plants emerge from the same planting station, select ""Yes""."
+data,mwfertiliserpilot.rda,intercropping,character,Do you practice intercropping?
+data,mwfertiliserpilot.rda,intercrop_type,character,What do you intercrop with?
+data,mwfertiliserpilot.rda,intercrop_type_other,character,Please specify.
+data,mwfertiliserpilot.rda,pesticide_use,character,Do you use pesticides?
+data,mwfertiliserpilot.rda,fertilizer_subsidy_received,character,Were you a beneficiary of fertilizer subsidies this year?
+data,mwfertiliserpilot.rda,concern_fertilizer_removed,character,How concerned are you about fertilizer subsidies being removed?
+data,mwfertiliserpilot.rda,concern_fertilizer_removed_explain,character,Please explain.
+data,mwfertiliserpilot.rda,fertilizer_programme_effective,character,Do you think the fertilizer subsidy programme reaches the people it is meant to?
+data,mwfertiliserpilot.rda,fertilizer_programme_improvements,character,Do you think the fertilizer subsidy programme could be improved?
+data,mwfertiliserpilot.rda,fertilizer_programme_improvements_explain,character,Please explain.
+data,mwfertiliserpilot.rda,apply_org_fertilizer,character,Do you apply organic fertilizers to your fields?
+data,mwfertiliserpilot.rda,origin_org_fertilizer,character,Where are you getting the organic fertilizer from?
+data,mwfertiliserpilot.rda,how_apply_org_fertilizer,character,How do you apply it?
+data,mwfertiliserpilot.rda,challenges_org_fertilizer,character,Do you have any challenges with organic fertilizers?
+data,mwfertiliserpilot.rda,type_challenges_org_fertilizer,character,What challenges do you have?
+data,mwfertiliserpilot.rda,type_challenges_org_fertilizer_other,character,Please elaborate.
+data,mwfertiliserpilot.rda,sufficient_org_fertilizer,character,Do you think organic fertilizers would be sufficient for your fields without any chemical fertilizer?
+data,mwfertiliserpilot.rda,subsidies_org_fertilizer,character,Should the government subsidise organic fertilizers?
+data,mwfertiliserpilot.rda,health_soil_now,character,How healthy do you think your soils are?
+data,mwfertiliserpilot.rda,health_soil_t10,character,How healthy do you think your soils were 10 years ago?
+data,mwfertiliserpilot.rda,reasons_changes,character,Why do you think so?
+data,mwfertiliserpilot.rda,suggestions_soil_improvement,character,What do you think should be done to restore/maintain/improve the soil health in your field?
+data,mwfertiliserpilot.rda,final_comments,character,Do you have anything else you would like to tell us?
+data,mwfertiliserpilot.rda,end_message,character,"Thank you for your time. The survey is now finished. Thank the person for their availability, time and answers. Ask if they have any further questions. This space allows you to report anything that may have been unusual during the survey."
+data,mwfertiliserpilot.rda,uuid,character,NA
