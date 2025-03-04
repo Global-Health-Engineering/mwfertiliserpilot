@@ -29,7 +29,11 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-Maize plays a central role in Malawi, yet best practices regarding its cultivation are rarely followed. Too much fertilizer (if available) is used per planting station, spacing between and across planting stations varies widely and the appropriate seeds are rarely used. 
+## Contributors
+
+- Colin Walder ([0009-0006-0969-1954](0009-0006-0969-1954)
+
+Maize plays a central role in Malawi, yet best practices regarding its cultivation are rarely followed. Often, too much or too little fertilizer is used per planting station, spacing between and across planting stations varies widely and the appropriate seeds are rarely used. 
 
 This dataset contains fertilizer management data from 129 farmers in the Ntonda Extension Planning Area (EPA) in Blantyre District in southern Malawi. Over a period of one week, farmers in different sections of the EPA were interviewed about their practices regarding maize cultivation. In addition, samples of both basal (NPK) and topdressing (urea) fertilizer were taken (`basal_fertilizer_grams` and `topdressing_fertilizer_grams`) to better understand how much fertilizer is used per planting station. 
 

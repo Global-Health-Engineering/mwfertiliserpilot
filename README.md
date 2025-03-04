@@ -51,7 +51,7 @@ The dataset `mwfertiliserpilot` contains data from 129 farmers regarding
 their maize fertilizer management in Ntonda EPA, Blantyre District,
 Malawi.
 
-For an overview of the variable names, see the following table.
+For an overview of the variable names, see the following table:
 
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
