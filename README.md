@@ -4,7 +4,7 @@
 <!-- badges: start -->
 
 [![License: CC BY
-4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![DOI](https://zenodo.org/badge/838883067.svg)](https://doi.org/10.5281/zenodo.14967536)
 
 <!-- badges: end -->
 
